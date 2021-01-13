@@ -11,3 +11,5 @@ CREATE TABLE `potion`
     `categorie` VARCHAR(20) NOT NULL,
     PRIMARY KEY (`id`)
     );
+
+    

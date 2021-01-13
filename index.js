@@ -27,7 +27,6 @@ app.get('/potion', (req, res) => {
 })
 
 app.post("/potion", (req, res) => {
-  console.log(req.body)
   const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
   connection.query(
     "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
@@ -41,6 +40,23 @@ app.post("/potion", (req, res) => {
           }
         }
     ); 
+});
+
+app.delete("/potion/:id", (req, res) => {
+  const idPotion = req.params.id;
+  connection.query(
+    "DELETE FROM potion WHERE id = ?",
+    [idPotion],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error deleting an potion");
+      } else {
+        res.status(200).send("Potion deleted!");
+
+      }
+    }
+  );
 });
 
 app.get('/', (req, res) => {
