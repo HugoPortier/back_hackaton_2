@@ -14,6 +14,7 @@ connection.connect(function (err) {
   console.log('connected as id ' + connection.threadId);
 });
 
+app.use(express.json())
 
 app.get('/potion', (req, res) => {
   connection.query("SELECT * from potion", (err, results) => {
@@ -26,11 +27,11 @@ app.get('/potion', (req, res) => {
 })
 
 app.post("/potion", (req, res) => {
-  console.log(req.body);
-  const { nom, effet, duration, age_min, age_max, categorie } = req.body;
+  console.log(req.body)
+  const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
   connection.query(
-    "INSERT INTO potion(nom, effet, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?)",
-    [nom, effet, duration, age_min, age_max, categorie],
+    "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
+    [nom, effet, image, duration, age_min, age_max, categorie],
     (err, results) => {
           if (err) {
             console.log(err);
@@ -41,8 +42,6 @@ app.post("/potion", (req, res) => {
         }
     ); 
 });
-
-app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).json('stay a while listen...');
