@@ -11,14 +11,45 @@ connection.connect(function (err) {
     console.error('error connecting: ' + err.stack);
     return;
   }
-  
   console.log('connected as id ' + connection.threadId);
+});
+
+
+app.get('/potion', (req, res) => {
+  connection.query("SELECT * from potion", (err, results) => {
+    if (err) {
+      res.status(500).send("Error retrieving data");
+    } else {
+      res.status(200).json(results);
+    }
+  });
+})
+
+app.post("/potion", (req, res) => {
+  console.log(req.body);
+  const { nom, effet, duration, age_min, age_max, categorie } = req.body;
+  connection.query(
+    "INSERT INTO potion(nom, effet, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?)",
+    [nom, effet, duration, age_min, age_max, categorie],
+    (err, results) => {
+          if (err) {
+            console.log(err);
+            res.status(500).send("Error saving a potion");
+          } else {
+            res.status(200).send("Successfully saved");
+          }
+        }
+    ); 
 });
 
 app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).json('stay a while listen...');
+});
+
+app.get('/potion', (req, res) => {
+  res.status(200).json('stay a while listen...');
 });
 
 app.listen(port, () => {
