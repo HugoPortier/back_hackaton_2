@@ -50,7 +50,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Elixir de Jouvence",
-    "effet": "Réussite",
+    "effet": "Elixir de Jouvence pour la chance de chaque jour ",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Elixir_de_Jouvence.jpg/800px-Elixir_de_Jouvence.jpg",
     "duration": "300",
     "age_min": "25",
@@ -60,7 +60,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 }
 {
     "nom": "Chance liquide",
-    "effet": "Réussite",
+    "effet": "Chance liquide pour la chance de chaque jour ",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Chance_Liquide.jpg/800px-Chance_Liquide.jpg",
     "duration": "300",
     "age_min": "14",
@@ -70,7 +70,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "The Love Potion",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "The Love Potion pour faire tomber amoureux deux personnes qui le boive.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/The_Love_Potion.jpg",
     "duration": "100",
     "age_min": "16",
@@ -80,7 +80,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Tristan et Iseut",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Tristan et Iseut pour faire tomber amoureux deux personnes qui le boive.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/John_Duncan_-_Tristan_%26_Isolde.jpg/800px-John_Duncan_-_Tristan_%26_Isolde.jpg",
     "duration": "100",
     "age_min": "16",
@@ -90,7 +90,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Philtre",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Philtre pour faire tomber amoureux deux personnes qui le boive.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Bave_de_Crapaud.jpg/800px-Bave_de_Crapaud.jpg",
     "duration": "100",
     "age_min": "16",
@@ -100,7 +100,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Potion d'amour Iseult",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Potion d'amour Iseult pour faire tomber amoureux deux personnes qui le boive.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Frederick_Sandys_-_Isolda_con_la_poci%C3%B3n_de_amor.jpg/800px-Frederick_Sandys_-_Isolda_con_la_poci%C3%B3n_de_amor.jpg",
     "duration": "100",
     "age_min": "16",
@@ -110,7 +110,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Distillat de Bonheur",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Distillat de Bonheur porte-bonheur au meilleur prix ! ",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Chance_Liquide_et_Distillat_de_Bonheur.jpg/800px-Chance_Liquide_et_Distillat_de_Bonheur.jpg",
     "duration": "100",
     "age_min": "14",
@@ -120,7 +120,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Bonheur 2",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "< Bonheur 2 > porte-bonheur au meilleur prix !",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Distillat_de_Bonheur.jpg/800px-Distillat_de_Bonheur.jpg",
     "duration": "100",
     "age_min": "10",
@@ -130,7 +130,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Concentré d'Intelligence",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Concentré d'Intelligence parfait pour s'assurer une journée de travail parfaite ou pour développer sa créativité.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Concentr%C3%A9_d%27Intelligence.jpg/800px-Concentr%C3%A9_d%27Intelligence.jpg",
     "duration": "100",
     "age_min": "16",
@@ -140,7 +140,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Concentré de Médisances",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Réaliser le rituel de malédiction.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Concentr%C3%A9_de_M%C3%A9disances.jpg/800px-Concentr%C3%A9_de_M%C3%A9disances.jpg",
     "duration": "100",
     "age_min": "16",
@@ -150,7 +150,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Potions et vieux grimoires",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Réaliser le rituel de malédiction.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Potions_et_vieux_grimoires.jpg/800px-Potions_et_vieux_grimoires.jpg",
     "duration": "100",
     "age_min": "16",
@@ -160,7 +160,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Jus de chaussette",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Réaliser le rituel de malédiction.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Jus_de_chaussette.jpg/800px-Jus_de_chaussette.jpg",
     "duration": "100",
     "age_min": "25",
@@ -170,7 +170,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Opium du Peuple",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Opium du Peuple parfait pour s'assurer une journée de travail parfaite ou pour développer sa créativité.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Opium_du_Peuple.jpg/800px-Opium_du_Peuple.jpg",
     "duration": "100",
     "age_min": "16",
@@ -180,7 +180,7 @@ ALTER TABLE `potion` ADD `prix` VARCHAR(50) NOT NULL;
 },
 {
     "nom": "Lait de Licorne",
-    "effet": "Philtre d’amour pour faire tomber amoureux deux personnes qui le boive.",
+    "effet": "Lait de Licorne parfait pour s'assurer une journée de travail parfaite ou pour développer sa créativité.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Lait_de_Licorne.jpg/800px-Lait_de_Licorne.jpg",
     "duration": "100",
     "age_min": "30",
