@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS potion;
+DROP TABLE IF EXISTS panier;
 create table `panier`
 (
     `id` INT NOT NULL AUTO_INCREMENT,
