@@ -16,7 +16,7 @@ connection.connect(function (err) {
 
 app.use(express.json())
 
-app.get('/potion', (req, res) => {
+app.get('/potions', (req, res) => {
   connection.query("SELECT * from potion", (err, results) => {
     if (err) {
       res.status(500).send("Error retrieving data");
@@ -26,11 +26,11 @@ app.get('/potion', (req, res) => {
   });
 })
 
-app.post("/potion", (req, res) => {
-  const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
+app.post("/potions", (req, res) => {
+  const { nom, effet, image, duration, age_min, age_max, categorie, prix } = req.body;
   connection.query(
-    "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
-    [nom, effet, image, duration, age_min, age_max, categorie],
+    "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie, prix) VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+    [nom, effet, image, duration, age_min, age_max, categorie, prix],
     (err, results) => {
           if (err) {
             console.log(err);
@@ -42,7 +42,7 @@ app.post("/potion", (req, res) => {
     ); 
 });
 
-app.delete("/potion/:id", (req, res) => {
+app.delete("/potions/:id", (req, res) => {
   const idPotion = req.params.id;
   connection.query(
     "DELETE FROM potion WHERE id = ?",
@@ -63,7 +63,7 @@ app.get('/', (req, res) => {
     res.status(200).json('stay a while listen...');
 });
 
-app.get('/potion', (req, res) => {
+app.get('/potions', (req, res) => {
   res.status(200).json('stay a while listen...');
 });
 
