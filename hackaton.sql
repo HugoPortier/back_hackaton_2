@@ -9,7 +9,7 @@ CREATE TABLE `potion`
     `age_min` VARCHAR(20) NULL,
     `age_max` VARCHAR(20) NULL,
     `categorie` VARCHAR(20) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY(`id`)
     );
 
     

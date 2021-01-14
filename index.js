@@ -4,6 +4,7 @@ const connection = require("./config");
 
 const port = 5000;
 const app = express();
+
 app.use(cors())
 
 connection.connect(function (err) {
@@ -16,7 +17,13 @@ connection.connect(function (err) {
 
 app.use(express.json())
 
-app.get('/potion', (req, res) => {
+app.get('/', (req, res) => {
+    res.status(200).json('stay a while listen...');
+});
+
+// ROUTE POTION
+
+app.get('/potions', (req, res) => {
   connection.query("SELECT * from potion", (err, results) => {
     if (err) {
       res.status(500).send("Error retrieving data");
@@ -26,7 +33,7 @@ app.get('/potion', (req, res) => {
   });
 })
 
-app.post("/potion", (req, res) => {
+app.post('/potions', (req, res) => {
   const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
   connection.query(
     "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
@@ -42,7 +49,7 @@ app.post("/potion", (req, res) => {
     ); 
 });
 
-app.delete("/potion/:id", (req, res) => {
+app.delete("/potions/:id", (req, res) => {
   const idPotion = req.params.id;
   connection.query(
     "DELETE FROM potion WHERE id = ?",
@@ -59,12 +66,49 @@ app.delete("/potion/:id", (req, res) => {
   );
 });
 
-app.get('/', (req, res) => {
-    res.status(200).json('stay a while listen...');
+// ROUTE PANIER
+
+app.get('/panier', (req, res) => {
+  connection.query("SELECT * from panier", (err, results) => {
+    if (err) {
+      res.status(500).send("Error retrieving data");
+    } else {
+      res.status(200).json(results);
+    }
+  });
+})
+
+app.post('/panier', (req, res) => {
+  const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
+  connection.query(
+    "INSERT INTO panier(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
+    [nom, effet, image, duration, age_min, age_max, categorie],
+    (err, results) => {
+          if (err) {
+            console.log(err);
+            res.status(500).send("Error saving a panier");
+          } else {
+            res.status(200).send("Successfully saved");
+          }
+        }
+    ); 
 });
 
-app.get('/potion', (req, res) => {
-  res.status(200).json('stay a while listen...');
+app.delete("/panier/:id", (req, res) => {
+  const idPotion = req.params.id;
+  connection.query(
+    "DELETE FROM panier WHERE id = ?",
+    [idPotion],
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Error deleting an panier");
+      } else {
+        res.status(200).send("Potion panier deleted!");
+
+      }
+    }
+  );
 });
 
 app.listen(port, () => {
