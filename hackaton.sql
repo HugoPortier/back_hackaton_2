@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS potion;
-CREATE TABLE `potion`
+create table `potion`
 (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nom` VARCHAR(50) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE `potion`
     `age_min` VARCHAR(20) NULL,
     `age_max` VARCHAR(20) NULL,
     `categorie` VARCHAR(20) NOT NULL,
+    `prix` VARCHAR(50) NOT NULL,
     PRIMARY KEY(`id`)
     );
-
     

@@ -9,5 +9,6 @@ create table `panier`
     `age_min` VARCHAR(20) NULL,
     `age_max` VARCHAR(20) NULL,
     `categorie` VARCHAR(20) NOT NULL,
+    `prix` VARCHAR(50) NOT NULL,
     PRIMARY KEY(`id`)
     );
