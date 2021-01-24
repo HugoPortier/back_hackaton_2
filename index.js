@@ -34,10 +34,10 @@ app.get('/potions', (req, res) => {
 })
 
 app.post('/potions', (req, res) => {
-  const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
+  const { nom, effet, image, duration, age_min, prix, age_max, categorie } = req.body;
   connection.query(
-    "INSERT INTO potion(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
-    [nom, effet, image, duration, age_min, age_max, categorie],
+    "INSERT INTO potion set ?",
+    req.body,
     (err, results) => {
           if (err) {
             console.log(err);
@@ -79,10 +79,10 @@ app.get('/panier', (req, res) => {
 })
 
 app.post('/panier', (req, res) => {
-  const { nom, effet, image, duration, age_min, age_max, categorie } = req.body;
+  const { nom, effet, image, duration, age_min, prix, age_max, categorie } = req.body;
   connection.query(
-    "INSERT INTO panier(nom, effet, image, duration, age_min, age_max, categorie) VALUES(?, ?, ?, ?, ?, ?, ?)",
-    [nom, effet, image, duration, age_min, age_max, categorie],
+    "INSERT INTO panier set ?",
+    req.body,
     (err, results) => {
           if (err) {
             console.log(err);
